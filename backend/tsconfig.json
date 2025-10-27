@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    /* ตั้งค่า TypeScript compiler */
+    "target": "ES2020",                          /* เวอร์ชัน JavaScript ที่ compile ออกมา */
+    "module": "commonjs",                        /* รูปแบบ module ที่ใช้ */
+    "lib": ["ES2020"],                           /* Libraries ที่รวมไว้ */
+    "outDir": "./dist",                          /* โฟลเดอร์สำหรับไฟล์ที่ compile แล้ว */
+    "rootDir": "./",                             /* โฟลเดอร์ต้นทาง source code */
+    
+    /* Strict Type-Checking Options */
+    "strict": true,                              /* เปิดใช้งาน strict mode */
+    "esModuleInterop": true,                     /* รองรับ ES module imports */
+    "skipLibCheck": true,                        /* ข้ามการตรวจสอบ .d.ts files */
+    "forceConsistentCasingInFileNames": true,    /* บังคับตัวพิมพ์เล็ก-ใหญ่ในชื่อไฟล์ */
+    
+    /* Module Resolution Options */
+    "moduleResolution": "node",                  /* ใช้วิธี resolve module แบบ Node.js */
+    "resolveJsonModule": true,                   /* อนุญาตให้ import JSON files */
+    
+    /* Advanced Options */
+    "sourceMap": true,                           /* สร้าง source map สำหรับ debug */
+    "declaration": true,                         /* สร้าง .d.ts files */
+    "declarationMap": true,                      /* สร้าง sourcemap สำหรับ .d.ts */
+    
+    /* Path Mapping */
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@controllers/*": ["./src/controllers/*"],
+      "@services/*": ["./src/services/*"],
+      "@middleware/*": ["./src/middleware/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@types/*": ["./src/types/*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "prisma/seed.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
+
